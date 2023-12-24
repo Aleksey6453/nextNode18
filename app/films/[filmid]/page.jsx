@@ -1,7 +1,7 @@
 import { getAllFilms } from "@/app/actions/getAllFilms";
 import { getFilm } from "@/app/actions/getFilm";
 
-export default async function Film({filmId}){
+export default async function Film({params: {filmId}}){
     const film = await getFilm(filmId)
 
     return(
